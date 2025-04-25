@@ -81,7 +81,7 @@ export const projects = [
     des: "使用這個番茄鐘跟創建待辦事項來幫助你更有效率的工作",
     img: "/pomodoro.png",
     iconLists: ["/vue.svg", "/tail.svg", "/ts.svg", "vite.svg"],
-    link: "/ui.aiimg.com",
+    link: "https://github.com/Pingu7731/PomodoroTimer",
   },
   {
     id: 4,
