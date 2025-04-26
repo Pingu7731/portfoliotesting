@@ -1,20 +1,7 @@
-"use client";
-import { useState, useEffect } from "react";
+import { gridItems } from "@/data";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
-import { gridItems } from "@/data"; // Assuming your gridItems data is available
 
 const Grid = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    // This will ensure the component only renders on the client-side
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null; // Return nothing on the server side or during the initial render
-  }
-
   return (
     <section id="about">
       <BentoGrid className="w-full py-20">
@@ -24,6 +11,8 @@ const Grid = () => {
             key={i}
             title={item.title}
             description={item.description}
+            // remove icon prop
+            // remove original classname condition
             className={item.className}
             img={item.img}
             imgClassName={item.imgClassName}

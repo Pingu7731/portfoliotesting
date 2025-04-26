@@ -1,5 +1,4 @@
-"use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -37,23 +36,25 @@ export const BentoGridItem = ({
   id,
   title,
   description,
+  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
   spareImg,
-}: any) => {
+}: {
+  className?: string;
+  id: number;
+  title?: string | React.ReactNode;
+  description?: string | React.ReactNode;
+  img?: string;
+  imgClassName?: string;
+  titleClassName?: string;
+  spareImg?: string;
+}) => {
+  const leftLists = ["ReactJS", "Flutter", "Typescript"];
+  const rightLists = ["VueJS", "NuxtJS", "TailwindCSS"];
+
   const [copied, setCopied] = useState(false);
-  const [isBrowser, setIsBrowser] = useState(false);
-
-  // Define leftLists and rightLists as arrays
-  const leftLists = ["React", "TypeScript", "TailwindCSS"];
-  const rightLists = ["Node.js", "Next.js", "GraphQL"];
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsBrowser(true); // Ensure this runs only on the client side
-    }
-  }, []);
 
   const defaultOptions = {
     loop: copied,
