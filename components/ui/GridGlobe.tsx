@@ -432,4 +432,5 @@ const GridGlobe = () => {
     </div>
   );
 };
+
 export default GridGlobe;
