@@ -62,7 +62,7 @@ const Hero = () => {
             <span className="font-bold underline decoration-indigo-200">
               韶軒
             </span>
-            ，來自馬來西亞。是一個對UI/UX 設計有興趣的人 <br />
+            ，來自馬來西亞。一個對前端，App開發和 UI/UX 設計有興趣的人 <br />
             ヾ(•ω•`)o
           </p>
 
